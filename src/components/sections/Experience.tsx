@@ -6,7 +6,7 @@ import { MapPin, Calendar } from 'lucide-react'
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-white">
+    <section id="experience" className="py-24 bg-[#0d1117]">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,10 +15,10 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="headline-large text-[#202124] mb-4">
+          <h2 className="headline-large text-[#f0f6fc] mb-4">
             Professional Experience
           </h2>
-          <p className="body-large text-[#5f6368] max-w-3xl mx-auto">
+          <p className="body-large text-[#8b949e] max-w-3xl mx-auto">
             A journey through innovative technology companies, leading AI/ML initiatives
             and building scalable software solutions that impact millions of users.
           </p>
@@ -36,18 +36,18 @@ export default function Experience() {
             >
               {/* Timeline line */}
               {index < experience.length - 1 && (
-                <div className="absolute left-8 top-24 w-0.5 h-32 bg-gray-300"></div>
+                <div className="absolute left-8 top-24 w-0.5 h-32 bg-[#30363d]"></div>
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-6 top-8 w-4 h-4 bg-[#1a73e8] rounded-full border-4 border-white shadow-lg"></div>
+              <div className="absolute left-6 top-8 w-4 h-4 bg-[#58a6ff] rounded-full border-4 border-[#0d1117] shadow-lg"></div>
               
               <div className="ml-20 google-card p-8">
                 <div className="mb-4">
-                  <h3 className="title-large text-[#202124] mb-2">{exp.title}</h3>
-                  <h4 className="title-medium text-[#1a73e8] mb-3">{exp.company}</h4>
+                  <h3 className="title-large text-[#f0f6fc] mb-2">{exp.title}</h3>
+                  <h4 className="title-medium text-[#58a6ff] mb-3">{exp.company}</h4>
                   
-                  <div className="flex flex-wrap gap-4 text-[#5f6368] mb-4 body-medium">
+                  <div className="flex flex-wrap gap-4 text-[#8b949e] mb-4 body-medium">
                     <div className="flex items-center gap-1">
                       <MapPin size={16} />
                       <span>{exp.location}</span>
@@ -68,9 +68,9 @@ export default function Experience() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: descIndex * 0.1 }}
                         viewport={{ once: true }}
-                        className="flex items-start gap-2 text-[#202124] body-medium"
+                        className="flex items-start gap-2 text-[#f0f6fc] body-medium"
                       >
-                        <div className="w-1.5 h-1.5 bg-[#1a73e8] rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-[#58a6ff] rounded-full mt-2 flex-shrink-0"></div>
                         <span>{desc}</span>
                       </motion.li>
                     ))}
@@ -78,7 +78,7 @@ export default function Experience() {
                 </div>
 
                 <div>
-                  <h5 className="title-medium text-[#202124] mb-3">Technologies Used:</h5>
+                  <h5 className="title-medium text-[#f0f6fc] mb-3">Technologies Used:</h5>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <motion.span
@@ -87,7 +87,7 @@ export default function Experience() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: techIndex * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-3 py-1 bg-[#f8f9fa] text-[#5f6368] rounded-full text-sm border border-[#e8eaed] body-medium"
+                        className="px-3 py-1 bg-[#161b22] text-[#8b949e] rounded-full text-sm border border-[#21262d] body-medium"
                       >
                         {tech}
                       </motion.span>

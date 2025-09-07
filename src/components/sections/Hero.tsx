@@ -6,7 +6,7 @@ import { contactInfo } from '@/lib/data/portfolio'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#f8f9fa] to-white flex items-center relative">
+    <section className="min-h-screen bg-gradient-to-b from-[#161b22] to-[#0d1117] flex items-center relative">
       <div className="max-w-6xl mx-auto px-6 py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,15 +22,15 @@ export default function Hero() {
             />
           </div>
           
-          <h1 className="display-large text-[#202124] mb-4 max-w-4xl mx-auto">
+          <h1 className="display-large text-[#f0f6fc] mb-4 max-w-4xl mx-auto">
             Ismail Kattakath
           </h1>
           
-          <h2 className="title-large text-[#5f6368] mb-6 max-w-2xl mx-auto">
+          <h2 className="title-large text-[#8b949e] mb-6 max-w-2xl mx-auto">
             Principal Software Engineer & AI Research Scientist
           </h2>
           
-          <p className="body-large text-[#5f6368] mb-8 max-w-2xl mx-auto">
+          <p className="body-large text-[#8b949e] mb-8 max-w-2xl mx-auto">
             15+ years of expertise in AI/ML engineering, full-stack development, 
             and technical leadership. Specializing in production-ready AI infrastructure 
             and scalable software architectures.
@@ -43,17 +43,17 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#e8eaed] body-medium">
-            <MapPin size={16} className="text-[#5f6368]" />
-            <span className="text-[#5f6368]">{contactInfo.location}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#21262d] rounded-full border border-[#30363d] body-medium">
+            <MapPin size={16} className="text-[#8b949e]" />
+            <span className="text-[#8b949e]">{contactInfo.location}</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#e8eaed] body-medium">
-            <Phone size={16} className="text-[#5f6368]" />
-            <span className="text-[#5f6368]">{contactInfo.phone}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#21262d] rounded-full border border-[#30363d] body-medium">
+            <Phone size={16} className="text-[#8b949e]" />
+            <span className="text-[#8b949e]">{contactInfo.phone}</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#e8eaed] body-medium">
-            <Mail size={16} className="text-[#5f6368]" />
-            <span className="text-[#5f6368]">{contactInfo.email}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#21262d] rounded-full border border-[#30363d] body-medium">
+            <Mail size={16} className="text-[#8b949e]" />
+            <span className="text-[#8b949e]">{contactInfo.email}</span>
           </div>
         </motion.div>
         
@@ -101,7 +101,7 @@ export default function Hero() {
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <ChevronDown className="text-[#9aa0a6] hover:text-[#5f6368] transition-colors" size={24} />
+          <ChevronDown className="text-[#6e7681] hover:text-[#8b949e] transition-colors" size={24} />
         </motion.div>
       </div>
     </section>

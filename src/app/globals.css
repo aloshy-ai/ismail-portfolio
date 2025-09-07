@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #202124;
-  --secondary-text: #5f6368;
-  --subtle-text: #9aa0a6;
-  --google-blue: #4285f4;
-  --google-blue-hover: #1a73e8;
-  --border-light: #e8eaed;
-  --border-medium: #dadce0;
-  --surface-elevated: #f8f9fa;
+  --background: #0d1117;
+  --foreground: #f0f6fc;
+  --secondary-text: #8b949e;
+  --subtle-text: #6e7681;
+  --google-blue: #58a6ff;
+  --google-blue-hover: #1f6feb;
+  --border-light: #21262d;
+  --border-medium: #30363d;
+  --surface-elevated: #161b22;
+  --surface-card: #21262d;
 }
 
 @theme inline {
@@ -35,24 +36,27 @@ body {
   letter-spacing: 0.25px;
 }
 
-/* Google AI Card Styles */
+/* Google AI Dark Card Styles */
 .google-card {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: 12px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .google-card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: var(--border-medium);
+  border-color: var(--border-medium);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
 .google-card-featured {
-  background: #ffffff;
+  background: var(--surface-card);
   border-radius: 16px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* Google Button Styles */
@@ -78,7 +82,7 @@ body {
 
 .google-btn-secondary {
   background: transparent;
-  color: var(--google-blue-hover);
+  color: var(--google-blue);
   border: 1px solid var(--border-medium);
   border-radius: 20px;
   padding: 10px 24px;
@@ -93,7 +97,8 @@ body {
 
 .google-btn-secondary:hover {
   background: var(--surface-elevated);
-  border-color: var(--google-blue-hover);
+  border-color: var(--google-blue);
+  color: var(--google-blue-hover);
 }
 
 /* Typography Scale */
