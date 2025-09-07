@@ -1,33 +1,73 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+/* Material Design 3 Dark Theme Tokens */
 :root {
-  --background: #0a0a0f;
-  --background-secondary: #0f0f1a;
-  --foreground: #ffffff;
-  --secondary-text: #a0a5b8;
-  --subtle-text: #707693;
-  --neon-cyan: #00ffff;
-  --neon-purple: #8b5cf6;
-  --neon-pink: #ff0080;
-  --neon-green: #00ff88;
-  --accent-blue: #3b82f6;
-  --border-light: #1a1a2e;
-  --border-medium: #2a2a4e;
-  --border-glow: #4a5568;
-  --surface-elevated: #12121f;
-  --surface-card: #1a1a2e;
-  --glass-bg: rgba(26, 26, 46, 0.8);
+  /* M3 Surface Colors */
+  --md-sys-color-surface: #121212;
+  --md-sys-color-surface-dim: #1a1a1a;
+  --md-sys-color-surface-bright: #3a3a3a;
+  --md-sys-color-surface-container-lowest: #0d0d0d;
+  --md-sys-color-surface-container-low: #1a1a1a;
+  --md-sys-color-surface-container: #1f1f1f;
+  --md-sys-color-surface-container-high: #2a2a2a;
+  --md-sys-color-surface-container-highest: #353535;
+  
+  /* M3 Primary Colors */
+  --md-sys-color-primary: #a8c7fa;
+  --md-sys-color-on-primary: #1e3a5f;
+  --md-sys-color-primary-container: #374f7f;
+  --md-sys-color-on-primary-container: #d0e3ff;
+  
+  /* M3 Secondary Colors */  
+  --md-sys-color-secondary: #80deea;
+  --md-sys-color-on-secondary: #00363a;
+  --md-sys-color-secondary-container: #004f58;
+  --md-sys-color-on-secondary-container: #9cf2ff;
+  
+  /* M3 Tertiary Colors */
+  --md-sys-color-tertiary: #ffcc80;
+  --md-sys-color-on-tertiary: #4d2a00;
+  --md-sys-color-tertiary-container: #6b3f00;
+  --md-sys-color-on-tertiary-container: #ffdeab;
+  
+  /* M3 Text Colors */
+  --md-sys-color-on-surface: #e0e0e0;
+  --md-sys-color-on-surface-variant: #bdbdbd;
+  --md-sys-color-outline: #9e9e9e;
+  --md-sys-color-outline-variant: #424242;
+  
+  /* M3 Error Colors */
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  
+  /* M3 Elevation */
+  --md-sys-elevation-level0: 0dp;
+  --md-sys-elevation-level1: 1dp;
+  --md-sys-elevation-level2: 3dp;
+  --md-sys-elevation-level3: 6dp;
+  --md-sys-elevation-level4: 8dp;
+  --md-sys-elevation-level5: 12dp;
+  
+  /* M3 Shape */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: 'Google Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--md-sys-color-surface);
+  --color-foreground: var(--md-sys-color-on-surface);
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
 }
 
-/* Google AI inspired styles */
+/* Material Design 3 Base Styles */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -35,279 +75,315 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  letter-spacing: 0.25px;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
 }
 
-/* Futuristic Glass Card Styles */
-.google-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1), 
-              0 4px 16px rgba(139, 92, 246, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+/* Material Design 3 Surface Styles */
+.md3-surface {
+  background: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-large);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  transition: all 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
 }
 
-.google-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(0, 255, 255, 0.1), 
-    transparent
-  );
-  transition: left 0.6s ease-in-out;
+.md3-surface-container {
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-medium);
 }
 
-.google-card:hover::before {
-  left: 100%;
+.md3-surface-container-high {
+  background: var(--md-sys-color-surface-container-high);
+  border-radius: var(--md-sys-shape-corner-large);
 }
 
-.google-card:hover {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3), 
-              0 16px 64px rgba(139, 92, 246, 0.2),
-              inset 0 1px 0 rgba(255, 255, 255, 0.2),
-              0 0 40px rgba(0, 255, 255, 0.1);
-  transform: translateY(-4px) scale(1.02);
-}
-
-.google-card-featured {
-  background: linear-gradient(145deg, 
-    var(--glass-bg), 
-    rgba(139, 92, 246, 0.1)
-  );
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  border: 1px solid var(--neon-purple);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3), 
-              0 10px 20px rgba(0, 255, 255, 0.2);
-}
-
-/* Futuristic Button Styles */
-.google-btn-primary {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--accent-blue));
-  color: #000000;
+.md3-card {
+  background: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-medium);
+  box-shadow: 
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
   border: none;
-  border-radius: 25px;
-  padding: 12px 32px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  min-height: 44px;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-  font-family: 'Google Sans', sans-serif;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3),
-              0 0 40px rgba(0, 255, 255, 0.1);
 }
 
-.google-btn-primary::before {
+.md3-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(255, 255, 255, 0.4), 
-    transparent
-  );
-  transition: left 0.5s ease-in-out;
+  inset: 0;
+  background: var(--md-sys-color-on-surface);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
 }
 
-.google-btn-primary:hover::before {
-  left: 100%;
+.md3-card:hover::before {
+  opacity: 0.08;
 }
 
-.google-btn-primary:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 30px rgba(0, 255, 255, 0.5),
-              0 0 60px rgba(0, 255, 255, 0.2);
+.md3-card:hover {
+  box-shadow: 
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
 }
 
-.google-btn-secondary {
-  background: transparent;
-  color: var(--neon-cyan);
-  border: 2px solid var(--neon-cyan);
-  border-radius: 25px;
-  padding: 10px 30px;
+.md3-card-filled {
+  background: var(--md-sys-color-surface-container-highest);
+}
+
+/* Material Design 3 Button Styles */
+.md3-btn-filled {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: var(--md-sys-shape-corner-large);
+  padding: 10px 24px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  min-height: 44px;
+  height: 40px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-  font-family: 'Google Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
+  font-family: 'Roboto', sans-serif;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 0 10px var(--neon-cyan);
-  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.1),
-              0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
-.google-btn-secondary:hover {
-  background: var(--neon-cyan);
-  color: #000000;
-  text-shadow: none;
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 30px rgba(0, 255, 255, 0.4),
-              0 0 50px rgba(0, 255, 255, 0.3);
+.md3-btn-filled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--md-sys-color-on-primary);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
 }
 
-/* Futuristic Typography Scale */
-.display-large {
+.md3-btn-filled:hover::before {
+  opacity: 0.08;
+}
+
+.md3-btn-filled:hover {
+  box-shadow: 
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.md3-btn-outlined {
+  background: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-corner-large);
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.md3-btn-outlined::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--md-sys-color-primary);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+
+.md3-btn-outlined:hover::before {
+  opacity: 0.08;
+}
+
+.md3-btn-outlined:hover {
+  border-color: var(--md-sys-color-primary);
+}
+
+/* Material Design 3 Typography Scale */
+.md3-display-large {
+  font-family: 'Roboto', sans-serif;
   font-size: 57px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 64px;
   letter-spacing: -0.25px;
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 4s ease-in-out infinite;
-  text-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  color: var(--md-sys-color-on-surface);
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.display-medium {
+.md3-display-medium {
+  font-family: 'Roboto', sans-serif;
   font-size: 45px;
   font-weight: 400;
   line-height: 52px;
-  letter-spacing: -0.25px;
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.display-small {
+.md3-display-small {
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 44px;
-  letter-spacing: -0.25px;
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.headline-large {
+.md3-headline-large {
+  font-family: 'Roboto', sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 40px;
-  letter-spacing: -0.25px;
-  color: var(--foreground);
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.headline-medium {
+.md3-headline-medium {
+  font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 36px;
-  letter-spacing: -0.25px;
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.headline-small {
+.md3-headline-small {
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.25px;
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.title-large {
+.md3-title-large {
+  font-family: 'Roboto', sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.title-medium {
+.md3-title-medium {
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.15px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.body-large {
+.md3-title-small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-body-large {
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.5px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.body-medium {
+.md3-body-medium {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.25px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-body-small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-label-large {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-label-medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-label-small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: var(--md-sys-color-on-surface);
+}
+
+/* Material Design 3 Color Variants */
+.md3-on-surface-variant {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.md3-primary {
+  color: var(--md-sys-color-primary);
+}
+
+.md3-secondary {
+  color: var(--md-sys-color-secondary);
+}
+
+.md3-tertiary {
+  color: var(--md-sys-color-tertiary);
 }
 
 /* Responsive Typography */
 @media (max-width: 640px) {
-  .display-large {
+  .md3-display-large {
     font-size: 36px;
     line-height: 44px;
   }
   
-  .display-medium {
+  .md3-display-medium {
     font-size: 32px;
     line-height: 40px;
   }
   
-  .display-small {
+  .md3-display-small {
     font-size: 28px;
     line-height: 36px;
   }
-}
 
-/* Futuristic Effects */
-.neon-glow {
-  box-shadow: 0 0 20px var(--neon-cyan),
-              0 0 40px var(--neon-cyan),
-              0 0 60px var(--neon-cyan);
-}
-
-.floating-animation {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-.pulse-glow {
-  animation: pulseGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes pulseGlow {
-  from { box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
-  to { box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), 0 0 60px rgba(139, 92, 246, 0.4); }
-}
-
-.grid-bg {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-.text-glow {
-  text-shadow: 0 0 10px currentColor,
-               0 0 20px currentColor,
-               0 0 30px currentColor;
+  .md3-headline-large {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
