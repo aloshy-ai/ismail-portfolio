@@ -84,7 +84,7 @@ export default function Hero() {
             <div className="relative w-96 h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600 rounded-full opacity-20 animate-pulse"></div>
               <img 
-                src="/images/profile.jpg" 
+                src="./images/profile.jpg" 
                 alt="Ismail Kattakath - Principal Software Engineer & AI Research Scientist"
                 className="relative z-10 w-80 h-80 mx-auto mt-8 rounded-full object-cover border-4 border-white shadow-2xl"
               />
