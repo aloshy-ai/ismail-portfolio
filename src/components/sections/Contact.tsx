@@ -6,7 +6,7 @@ import { contactInfo } from '@/lib/data/portfolio'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -18,7 +18,7 @@ export default function Contact() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             I&apos;m always open to discussing new opportunities, interesting projects, 
             or potential collaborations in AI/ML and software engineering.
@@ -38,7 +38,7 @@ export default function Contact() {
               <motion.a
                 href={`mailto:${contactInfo.email}`}
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Mail className="text-white" size={20} />
@@ -52,7 +52,7 @@ export default function Contact() {
               <motion.a
                 href={`tel:${contactInfo.phone}`}
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                   <Phone className="text-white" size={20} />
@@ -63,7 +63,7 @@ export default function Contact() {
                 </div>
               </motion.a>
 
-              <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200">
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
                 <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                   <MapPin className="text-white" size={20} />
                 </div>
@@ -106,7 +106,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-xl p-8 border border-gray-200"
+            className="bg-gray-50 rounded-lg p-8"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Professional Focus</h3>
             
@@ -136,8 +136,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 p-4 bg-gray-100 rounded-xl border border-gray-200">
-              <p className="text-gray-700 text-sm text-center">
+            <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+              <p className="text-blue-800 text-sm text-center">
                 <strong>Currently open to:</strong> Senior engineering roles, AI/ML consulting, 
                 and strategic technical advisory positions.
               </p>

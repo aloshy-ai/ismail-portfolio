@@ -14,7 +14,7 @@ const colorMap: { [key: string]: string } = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ export default function Skills() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Technical Skills
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -37,7 +37,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center mb-4">
                 <div className={`w-3 h-3 ${colorMap[skillCategory.category] || 'bg-gray-600'} rounded-full mr-3`}></div>
@@ -52,7 +52,7 @@ export default function Skills() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
                     viewport={{ once: true }}
-                    className="px-3 py-1 bg-white text-gray-600 rounded-full text-sm border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
+                    className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors"
                   >
                     {skill}
                   </motion.span>
