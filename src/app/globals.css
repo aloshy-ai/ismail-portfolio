@@ -4,38 +4,38 @@
 /* Material Design 3 Dark Theme Tokens */
 :root {
   /* M3 Surface Colors */
-  --md-sys-color-surface: #121212;
-  --md-sys-color-surface-dim: #1a1a1a;
-  --md-sys-color-surface-bright: #3a3a3a;
-  --md-sys-color-surface-container-lowest: #0d0d0d;
-  --md-sys-color-surface-container-low: #1a1a1a;
-  --md-sys-color-surface-container: #1f1f1f;
-  --md-sys-color-surface-container-high: #2a2a2a;
-  --md-sys-color-surface-container-highest: #353535;
+  --md-sys-color-surface: #0c0a1a;
+  --md-sys-color-surface-dim: #1a182a;
+  --md-sys-color-surface-bright: #3a384a;
+  --md-sys-color-surface-container-lowest: #070515;
+  --md-sys-color-surface-container-low: #1a182a;
+  --md-sys-color-surface-container: #1f1d2f;
+  --md-sys-color-surface-container-high: #2a283a;
+  --md-sys-color-surface-container-highest: #353345;
   
-  /* M3 Primary Colors */
-  --md-sys-color-primary: #a8c7fa;
-  --md-sys-color-on-primary: #1e3a5f;
-  --md-sys-color-primary-container: #374f7f;
-  --md-sys-color-on-primary-container: #d0e3ff;
+  /* M3 Primary Colors (Teal) */
+  --md-sys-color-primary: #00f5d4;
+  --md-sys-color-on-primary: #003d34;
+  --md-sys-color-primary-container: #005248;
+  --md-sys-color-on-primary-container: #99ffee;
   
-  /* M3 Secondary Colors */  
-  --md-sys-color-secondary: #80deea;
-  --md-sys-color-on-secondary: #00363a;
-  --md-sys-color-secondary-container: #004f58;
-  --md-sys-color-on-secondary-container: #9cf2ff;
+  /* M3 Secondary Colors (Magenta) */  
+  --md-sys-color-secondary: #ff00f5;
+  --md-sys-color-on-secondary: #4a004a;
+  --md-sys-color-secondary-container: #6e006e;
+  --md-sys-color-on-secondary-container: #ff99ff;
   
-  /* M3 Tertiary Colors */
-  --md-sys-color-tertiary: #ffcc80;
+  /* M3 Tertiary Colors (Orange) */
+  --md-sys-color-tertiary: #ff8c00;
   --md-sys-color-on-tertiary: #4d2a00;
   --md-sys-color-tertiary-container: #6b3f00;
   --md-sys-color-on-tertiary-container: #ffdeab;
   
   /* M3 Text Colors */
-  --md-sys-color-on-surface: #e0e0e0;
-  --md-sys-color-on-surface-variant: #bdbdbd;
-  --md-sys-color-outline: #9e9e9e;
-  --md-sys-color-outline-variant: #424242;
+  --md-sys-color-on-surface: #e3e1f0;
+  --md-sys-color-on-surface-variant: #c3c1d0;
+  --md-sys-color-outline: #9e9cb0;
+  --md-sys-color-outline-variant: #424150;
   
   /* M3 Error Colors */
   --md-sys-color-error: #ffb4ab;
