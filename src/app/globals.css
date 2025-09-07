@@ -1,26 +1,186 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #202124;
+  --secondary-text: #5f6368;
+  --subtle-text: #9aa0a6;
+  --google-blue: #4285f4;
+  --google-blue-hover: #1a73e8;
+  --border-light: #e8eaed;
+  --border-medium: #dadce0;
+  --surface-elevated: #f8f9fa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Google Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Google AI inspired styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.25px;
+}
+
+/* Google AI Card Styles */
+.google-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.google-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.google-card-featured {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+}
+
+/* Google Button Styles */
+.google-btn-primary {
+  background: var(--google-blue-hover);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  min-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  font-family: 'Google Sans', sans-serif;
+}
+
+.google-btn-primary:hover {
+  background: #1765cc;
+  box-shadow: 0 1px 2px 0 rgba(26, 115, 232, 0.302), 0 1px 3px 1px rgba(26, 115, 232, 0.149);
+}
+
+.google-btn-secondary {
+  background: transparent;
+  color: var(--google-blue-hover);
+  border: 1px solid var(--border-medium);
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  min-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  font-family: 'Google Sans', sans-serif;
+}
+
+.google-btn-secondary:hover {
+  background: var(--surface-elevated);
+  border-color: var(--google-blue-hover);
+}
+
+/* Typography Scale */
+.display-large {
+  font-size: 57px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+}
+
+.display-medium {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -0.25px;
+}
+
+.display-small {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: -0.25px;
+}
+
+.headline-large {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+}
+
+.headline-medium {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+}
+
+.headline-small {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.25px;
+}
+
+.title-large {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+
+.title-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.body-large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+}
+
+.body-medium {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .display-large {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  
+  .display-medium {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .display-small {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
