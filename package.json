@@ -3,25 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "npm run build && npx gh-pages -d out -t true",
+    "deploy-auto": "nohup npm run deploy > /tmp/deploy.log 2>&1 &"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "gh-pages": "^6.3.0",
+    "lucide-react": "^0.542.0",
+    "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "react-intersection-observer": "^9.16.0",
+    "react-typed": "^2.0.12",
+    "sharp": "^0.34.3",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
