@@ -6,7 +6,7 @@ import { ExternalLink, Code } from 'lucide-react'
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -18,7 +18,7 @@ export default function Projects() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,12 +29,12 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{project.name}</h3>
-                  <Code className="text-blue-600" size={24} />
+                  <Code className="text-gray-600" size={24} />
                 </div>
                 
                 <p className="text-gray-700 mb-4 leading-relaxed">
@@ -46,7 +46,7 @@ export default function Projects() {
                   <ul className="space-y-1">
                     {project.highlights.map((highlight, highlightIndex) => (
                       <li key={highlightIndex} className="flex items-start gap-2 text-sm text-gray-600">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-1.5 flex-shrink-0"></div>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -58,7 +58,7 @@ export default function Projects() {
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs"
+                        className="px-2 py-1 bg-white text-gray-600 rounded text-xs border border-gray-200"
                       >
                         {tech}
                       </span>
@@ -75,7 +75,7 @@ export default function Projects() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
+                    className="flex-1 bg-gray-900 hover:bg-gray-800 text-white py-2 px-4 rounded-full transition-colors flex items-center justify-center gap-2 text-sm font-medium"
                   >
                     <ExternalLink size={16} />
                     View Details

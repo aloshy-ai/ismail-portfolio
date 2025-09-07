@@ -6,7 +6,7 @@ import { MapPin, Calendar } from 'lucide-react'
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -18,7 +18,7 @@ export default function Experience() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Professional Experience
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -37,12 +37,12 @@ export default function Experience() {
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-6 top-8 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md"></div>
+              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white shadow-md"></div>
               
-              <div className="ml-20 bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
+              <div className="ml-20 bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{exp.title}</h3>
-                  <h4 className="text-xl text-blue-600 font-semibold mb-3">{exp.company}</h4>
+                  <h4 className="text-xl text-gray-700 font-semibold mb-3">{exp.company}</h4>
                   
                   <div className="flex flex-wrap gap-4 text-gray-600 mb-4">
                     <div className="flex items-center gap-1">
@@ -67,7 +67,7 @@ export default function Experience() {
                         viewport={{ once: true }}
                         className="flex items-start gap-2 text-gray-700"
                       >
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{desc}</span>
                       </motion.li>
                     ))}
@@ -84,7 +84,7 @@ export default function Experience() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: techIndex * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                        className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm border border-gray-200"
                       >
                         {tech}
                       </motion.span>
