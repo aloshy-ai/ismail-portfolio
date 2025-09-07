@@ -8,8 +8,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ismail-portfolio' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/ismail-portfolio' : '',
+  // Remove basePath and assetPrefix for custom domain
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/ismail-portfolio' : '',
+  // basePath: process.env.NODE_ENV === 'production' ? '/ismail-portfolio' : '',
 };
 
 export default nextConfig;
